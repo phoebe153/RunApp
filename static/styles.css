@@ -1,0 +1,83 @@
+/* Allgemein zentrieren */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Überschrift blau und zentriert mit Abstand */
+  h1 {
+    color: #4B92DB;
+    margin-bottom: 20px;
+  }
+  
+  /* Boxen mit abgerundeten Ecken und Schatten */
+  .box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(75, 146, 219, 0.2);
+    margin-bottom: 20px;
+    width: 320px;
+    box-sizing: border-box;
+  }
+  
+  /* Labels und Inputs */
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input, select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  /* Buttons hellblau */
+  button {
+    background-color: #add8e6;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    background-color: #9ac6db;
+  }
+  
+  /* Entfernt Pfeile bei number inputs */
+  input[type=number]::-webkit-outer-spin-button,
+  input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+  
+  /* Ergebnis-Listen */
+  #standardResults ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+  }
+  
+  #standardResults li {
+    padding: 4px 0;
+  }

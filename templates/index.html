@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Laufzeiten Rechner</title>
+  <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <h1>Laufzeiten Rechner</h1>
+
+    <!-- Eingabe Pace oder Geschwindigkeit -->
+    <div class="box">
+      <label for="pace">Pace (min/km):</label>
+      <input type="text" id="pace" placeholder="z. B. 5:30" inputmode="numeric" />
+      <span>oder</span>
+      <label for="speed">Geschwindigkeit (km/h):</label>
+      <input type="number" id="speed" step="0.1" inputmode="decimal" />
+    </div>
+
+    <!-- Benutzerdefinierte Strecke -->
+    <div class="box">
+      <label for="customDistance">Benutzerdefinierte Strecke (km):</label>
+      <input type="number" id="customDistance" step="0.1" inputmode="decimal" />
+      <button id="calculateCustom">Berechnen</button>
+      <div id="customResult"></div>
+    </div>
+
+    <!-- Standarddistanzen -->
+    <div class="box">
+      <label>Standarddistanzen:</label>
+      <button id="calculateStandard">Berechnen</button>
+      <ul id="standardResults"></ul>
+    </div>
+
+    <!-- Bekannte Läufer -->
+    <div class="box">
+      <label for="runnerSelect">Bekannte Läufer:innen:</label>
+      <select id="runnerSelect">
+        <option value="">— auswählen —</option>
+        <option value="Eliud Kipchoge">Eliud Kipchoge</option>
+        <option value="Paula Radcliffe">Paula Radcliffe</option>
+        <option value="Kenenisa Bekele">Kenenisa Bekele</option>
+        <option value="Haile Gebrselassie">Haile Gebrselassie</option>
+        <option value="Abebe Bikila">Abebe Bikila</option>
+        <option value="Konstanze Klosterhalfen">Konstanze Klosterhalfen</option>
+      </select>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', path='script.js') }}"></script>
+</body>
+</html>
